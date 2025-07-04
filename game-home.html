@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sparked - Game</title>
+  <script src="game-embed/Build/build1.loader.js"></script>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to use this website</noscript>
+
+  <h1 class="pixel-art">
+    <img class="header-img" src="assets/sparked-logo-txt.png">
+  </h1>
+  <nav class="nav-container">
+    <a href="index.html"><img src="assets/home-button.png" class="pixel-art top-nav-content"></a>
+    <a href="game-home.html"><img src="assets/play-button.png" class="pixel-art top-nav-content"></a>
+    <a href="donations.html"><img src="assets/donations-button.png" class="pixel-art top-nav-content"></a>
+  </nav>
+
+  <div id="unityContainer" style="width: 960px; height: 600px"></div>
+
+  <script>
+    createUnityInstance(document.querySelector("#unityContainer"), {
+      dataUrl: "game-embed/Build/build1.data",
+      frameworkUrl: "game-embed/Build/build1.framework.js",
+      codeUrl: "game-embed/Build/build1.wasm",
+      streamingAssetsUrl: "game-embed/StreamingAssets",
+      companyName: "YourCompany",
+      productName: "YourGame",
+      productVersion: "1.0",
+    });
+  </script>
+</body>
+</html>
